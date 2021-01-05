@@ -30,8 +30,8 @@ By submiting the project I ensure that the results meet the requirements in the 
 
 [image1]: ./output_images/calibration.jpg "Undistorted chessboard image"
 [image2]: ./output_images/undistorted.jpg "Undstorted image from the lane detection sequence"
-[image3]: ./output_images/threholded_gradient.jpg "Binary image based on the gradient threshold"
-[image4]: ./output_images/threholded_colour.jpg "Binary image based on the colour threshold"
+[image3]: ./output_images/thresholded_gradient.jpg "Binary image based on the gradient threshold"
+[image4]: ./output_images/thresholded_colour.jpg "Binary image based on the colour threshold"
 [image5]: ./output_images/region_of_interest_straight_lines1_small.jpg "Warp example - source image"
 [image6]: ./output_images/warped_colour_with_roi_straight_lines1_small.jpg "Warp example - result image"
 [image7]: ./output_images/lane_detection.jpg "Lane detection in the warped binary image"
@@ -92,7 +92,7 @@ Code section #4 contains gradient calculation and thresholding methods:
 
 Example of the binary image created with gradient thresholding can be seen below:
 ![alt text][image3]
-More examples can be found in the `output_images` folder as `threholded_gradient_*.jpg` files.
+More examples can be found in the `output_images` folder as `thresholded_gradient_*.jpg` files.
 
 In the method `colour_threshold()`, code section #5, I implement my colour thresholding approach.
 As a first step I convert image to HLS colour space to align processing more closely with the way human vision perceives color attributes.
@@ -100,12 +100,12 @@ For the next step I tried different approaches, e.g. calculation of gradients on
 
 Example of the binary image created with colour thresholding can be seen below:
 ![alt text][image4]
-More examples can be found in the `output_images` folder as `threholded_colour_*.jpg` files.
+More examples can be found in the `output_images` folder as `thresholded_colour_*.jpg` files.
 
 As a final step, `combined_threshold()` method in code section #6 combines both gradient and colour binary images together, which in many cases gives better results for lane detection.
 Using combined approach you can adapt binary image generation to individual lighting conditions or colour of the road markings (improvement point for this project)
 
-Examples of the combined binary images can be found in the `output_images` folder as `threholded_combined_*.jpg` files.
+Examples of the combined binary images can be found in the `output_images` folder as `thresholded_combined_*.jpg` files.
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
