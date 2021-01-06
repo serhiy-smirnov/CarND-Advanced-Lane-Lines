@@ -39,6 +39,7 @@ By submiting the project I ensure that the results meet the requirements in the 
 [image8]: ./output_images/lane_detection2.jpg "Lane detection in the warped binary image"
 [image9]: ./output_images/result.jpg "Lane detection rendered back into the perspective source image"
 [video1]: ./output_project_video.mp4 "Processing result of the project video"
+[equation4]: https://latex.codecogs.com/gif.download?%5Clarge%20R_%7Bcurve%7D%3D%5Cfrac%7B%281+%28%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20y%7D%29%5E2%29%5E%7B3/2%7D%7D%7B%5Cleft%20%7C%20%5Cfrac%7B%5Cpartial%5E2%20x%7D%7B%5Cpartial%20y%5E2%7D%20%5Cright%20%7C%7D "Curvature radius"
 
 ## Rubric Points
 
@@ -196,6 +197,8 @@ Curvature calculation in the method `calculate_radius_and_base_pos()` of the `Li
 Given that we fit ![equation1](https://latex.codecogs.com/gif.download?f%28y%29) rather than ![equation2](https://latex.codecogs.com/gif.download?f%28x%29), radius of curvature can be calculated as:
 
 ![equation4](https://latex.codecogs.com/gif.download?%5Clarge%20R_%7Bcurve%7D%3D%5Cfrac%7B%281+%28%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20y%7D%29%5E2%29%5E%7B3/2%7D%7D%7B%5Cleft%20%7C%20%5Cfrac%7B%5Cpartial%5E2%20x%7D%7B%5Cpartial%20y%5E2%7D%20%5Cright%20%7C%7D)
+
+![alt text][equation4]
 
 For the ![equation4](https://latex.codecogs.com/gif.download?y) I take the value closest to the car:
 ```python
